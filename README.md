@@ -1,5 +1,6 @@
-VRDL Hw4
+Image Super Resolution
 ===
+Super resolution (SR) is the process of taking an input of a low resolution (LR) and upscaling it to that of a high resolution.
 This program is the implementation of the paper *[Enhanced Deep Residual Networks for Single Image Super-Resolution](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf)* by Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee.
 
 ### Hardware
@@ -33,12 +34,14 @@ src
     └── training_hr_images
 ```
 ### Training
+Execute following instruction to train the model:
 ```
 python main.py --model EDSR --scale 3 --patch_size 30 --save edsr_baseline_x3 --reset --dir_data . --lr 0.00005
 ```
 ※ get more info by `python main.py -h`
 
 ### Testing
+Execute following instruction to test images:
 ```
-python main.py --data_test Demo --dir_demo HW4 --scale 3 --pre_train ../experiment/edsr_baseline_x3/model/model_best.pt --test_only --save_results --save HW4_result
+python main.py --data_test Demo --dir_demo ./hw4/testing_lr_images/testing_lr_images --scale 3 --pre_train ../experiment/edsr_baseline_x3/model/model_best.pt --test_only --save_results --save HW4_result
 ```
