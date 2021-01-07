@@ -36,6 +36,7 @@ src
 ```
 python main.py --model EDSR --scale 3 --patch_size 30 --save edsr_baseline_x3 --reset --dir_data . --lr 0.00005
 ```
+※ get more info by `python main.py -h`
 
 ### Testing
 ```
